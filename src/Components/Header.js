@@ -105,7 +105,7 @@ export default withRouter(({ history }) => {
               <User />
             </HeaderLink>
           ) : (
-            <HeaderLink to={data.me.username}>
+            <HeaderLink to={data && data.me ? data.me.username : null}>
               <User />
             </HeaderLink>
           )}
